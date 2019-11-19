@@ -49,7 +49,7 @@ namespace VoteDemo.XML
                 //XDocument document = XDocument.LoadAsync("asdas");
                 XmlDocument document = new XmlDocument();
                 document.Load(FileName);
-                var node = document.SelectSingleNode($"/teams/team[id=\"{id}\"]");
+                var node = document.SelectSingleNode($"/teams/team[@id='{id}']");
                 if (node != null)
                 {
                     if (Int32.TryParse(node["vote"].InnerText, out var vote))
