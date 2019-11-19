@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using VoteDemo.Models;
+using VoteDemo.XML;
 
 namespace VoteDemo.Controllers
 {
@@ -16,35 +17,24 @@ namespace VoteDemo.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            List<VoteInfo> voteInfos=new List<VoteInfo>();
-            voteInfos.Add(new VoteInfo
-            {
-                TeamName = "ABC",
-                Votes = 12
-            });
-            voteInfos.Add(new VoteInfo
-            {
-                TeamName = "QWE",
-                Votes = 40
-            });
-            voteInfos.Add(new VoteInfo
-            {
-                TeamName = "ASD",
-                Votes = 1
-            });
-            voteInfos.Add(new VoteInfo
-            {
-                TeamName = "FGH",
-                Votes = 5
-            });
+            TeamService service=new TeamService();
+            IList<VoteInfo> voteInfos = service.GetTeamVoteInfos();
             return Json(voteInfos);
         }
 
         // GET: api/Vote/5
         [HttpGet("{id}", Name = "Get")]
-        public string Get(int id)
+        public IActionResult Get(int id)
         {
-            return "value";
+            TeamService service = new TeamService();
+            if (service.Vote(id))
+            {
+                return Json("success");
+            }
+            else
+            {
+                return Json("failed");
+            }
         }
 
         // POST: api/Vote

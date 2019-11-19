@@ -8,6 +8,7 @@ namespace VoteDemo.Models
     public class VoteInfo
     {
         public string TeamName { get; set; }
+        public int Id { get; set; }
         public int Votes { get; set; }
     }
 }
