@@ -1,17 +1,14 @@
 ﻿var requestUrl = "https://localhost:5001/api/Vote";
+
+var votes = [];
+var teams = [];
 var teamId = [];
-var vote = function(id){
-    var url = requestUrl + "/" + id;
-    console.log(url);
-    $.getJSON(url, function (result) {
-        console.log("result:" + result);
-        getData();
-    });
-}
-var getData = function () {
+var chart;
+
+var fetchData = function () {
     $.getJSON(requestUrl, function (result) {
-        var votes = [];
-        var teams = [];
+        votes.length = 0;
+        teams.length = 0;
         teamId.length = 0;
         $.each(result, function (i, field) {
             votes.push(field.votes);
@@ -62,7 +59,7 @@ var getData = function () {
                 inverted: true
             },
             title: {
-                text: "NBA各队伍得票数情况"
+                text: "NBA " + teams.length+"支队伍得票数情况"
             },
             subtitle: {
                 text: ""
@@ -85,27 +82,36 @@ var getData = function () {
                         enabled: true,
                         allowOverlap: true
                     },
-                    animation: false,
+                    animation: true,
                     events: {
                         click: function (e) {
+                            console.log(e);
                             var index = teams.indexOf(e.point.category);
-                            if (index != -1) {
-                                vote(teamId[index]);
+                            if (index !== -1) {
+                                vote(teamId[index], e.point.index);
                             }
-                            else {
-                                console.log(e.point.category);
-                            }
-                            
+
                         }
                     }
                 }
             }
         }
-        // 图表初始化函数
-        var chart = Highcharts.chart('container', options);
+        chart = Highcharts.chart('container', options);
+    });
+}
+var vote = function (id,index) {
+    var url = requestUrl + "/" + id;
+    console.log(url);
+    $.getJSON(url, function (result) {
+        if (result === "success") {
+            var vote = chart.series[0].data[index].y;
+            chart.series[0].data[index].update({y:vote+1});
+        }
+        console.log("result:" + result);
     });
 }
 
+
 $(document).ready(function () {
-    getData();
+    fetchData();
 });

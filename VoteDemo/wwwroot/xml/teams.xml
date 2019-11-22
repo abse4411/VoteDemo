@@ -2,87 +2,87 @@
 <teams>
   <team id="1">
     <name>76人</name>
-    <vote>2</vote>
+    <vote>15</vote>
   </team>
   <team id="2">
     <name>热火</name>
-    <vote>3</vote>
+    <vote>16</vote>
   </team>
   <team id="3">
     <name>凯尔特人</name>
-    <vote>3</vote>
+    <vote>9</vote>
   </team>
   <team id="4">
     <name>雄鹿</name>
-    <vote>3</vote>
+    <vote>9</vote>
   </team>
   <team id="5">
     <name>猛龙</name>
-    <vote>2</vote>
+    <vote>10</vote>
   </team>
   <team id="6">
     <name>黄蜂</name>
-    <vote>1</vote>
+    <vote>10</vote>
   </team>
   <team id="7">
     <name>步行者</name>
-    <vote>1</vote>
+    <vote>7</vote>
   </team>
   <team id="8">
     <name>活塞</name>
-    <vote>1</vote>
+    <vote>8</vote>
   </team>
   <team id="9">
     <name>老鹰</name>
-    <vote>1</vote>
+    <vote>4</vote>
   </team>
   <team id="10">
     <name>魔术</name>
-    <vote>1</vote>
+    <vote>5</vote>
   </team>
   <team id="11">
     <name>骑士</name>
-    <vote>1</vote>
+    <vote>2</vote>
   </team>
   <team id="12">
     <name>篮网</name>
-    <vote>1</vote>
+    <vote>3</vote>
   </team>
   <team id="13">
     <name>公牛</name>
-    <vote>1</vote>
+    <vote>3</vote>
   </team>
   <team id="14">
     <name>奇才</name>
-    <vote>1</vote>
+    <vote>3</vote>
   </team>
   <team id="15">
     <name>尼克斯</name>
-    <vote>1</vote>
+    <vote>5</vote>
   </team>
   <team id="16">
     <name>湖人</name>
-    <vote>1</vote>
+    <vote>3</vote>
   </team>
   <team id="17">
     <name>森林狼</name>
-    <vote>1</vote>
+    <vote>4</vote>
   </team>
   <team id="18">
     <name>快船</name>
-    <vote>1</vote>
+    <vote>2</vote>
   </team>
   <team id="19">
     <name>独行侠</name>
-    <vote>1</vote>
+    <vote>4</vote>
   </team>
   <team id="20">
     <name>掘金</name>
-    <vote>1</vote>
+    <vote>5</vote>
   </team>
   <team id="21">
     <name>太阳</name>
-    <vote>1</vote>
+    <vote>8</vote>
   </team>
   <team id="22">
     <name>马刺</name>
@@ -90,11 +90,11 @@
   </team>
   <team id="23">
     <name>爵士</name>
-    <vote>1</vote>
+    <vote>2</vote>
   </team>
   <team id="24">
     <name>火箭</name>
-    <vote>1</vote>
+    <vote>3</vote>
   </team>
   <team id="25">
     <name>开拓者</name>
@@ -102,7 +102,7 @@
   </team>
   <team id="26">
     <name>雷霆</name>
-    <vote>1</vote>
+    <vote>4</vote>
   </team>
   <team id="27">
     <name>国王</name>
@@ -118,6 +118,6 @@
   </team>
   <team id="30">
     <name>鹈鹕</name>
-    <vote>2</vote>
+    <vote>7</vote>
   </team>
 </teams>
